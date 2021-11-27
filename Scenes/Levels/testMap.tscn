@@ -1,3 +1,13 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Creatures/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Objects/basicPlatform.tscn" type="PackedScene" id=2]
 
 [node name="testMap" type="Node"]
+
+[node name="basicPlatform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 497.646, 573.829 )
+scale = Vector2( 20, 1 )
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 500.104, 520.993 )
