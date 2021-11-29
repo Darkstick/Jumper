@@ -1,13 +1,20 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Scenes/Creatures/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scenes/Objects/basicPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/Objects/thinPlatform.tscn" type="PackedScene" id=3]
 
 [node name="testMap" type="Node"]
 
-[node name="basicPlatform" parent="." instance=ExtResource( 2 )]
-position = Vector2( 497.646, 573.829 )
-scale = Vector2( 20, 1 )
+[node name="floor" parent="." instance=ExtResource( 2 )]
+position = Vector2( 497.646, 585.667 )
+scale = Vector2( 9, 2 )
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 496.692, 522.833 )
+
+[node name="basicPlatform" parent="." instance=ExtResource( 2 )]
+position = Vector2( 305.27, 427.723 )
+
+[node name="thinPlatform" parent="." instance=ExtResource( 3 )]
+position = Vector2( 655.381, 432.897 )
