@@ -33,11 +33,5 @@ func _physics_process(delta):
 
 	#floor detection#
 	if $Ground.is_colliding():
-		platform = $Ground.get_collider().name
-		print(platform)
-	if platform == "icyPlatform":
-		friction = 0.01
-		acceleration = 0.02
-	else:
-		friction = 0.2
-		acceleration = 0.25
+		platform = $Ground.get_collider()
+		platform.contact(self)
