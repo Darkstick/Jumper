@@ -6,6 +6,7 @@ export var gravity = 2000
 export (float, 0, 1.0) var friction = 0.2
 export (float, 0, 1.0) var acceleration = 0.25
 var velocity = Vector2.ZERO
+var platform = null
 
 func get_input():
 	var dir = 0
@@ -21,6 +22,7 @@ func get_input():
 		pass
 
 func _physics_process(delta):
+	#movement#
 	if is_on_floor():
 		get_input()
 	velocity.y += gravity * delta
@@ -28,3 +30,14 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("up"):
 		if is_on_floor():
 			velocity.y = jumpspeed
+
+	#floor detection#
+	if $Ground.is_colliding():
+		platform = $Ground.get_collider().name
+		print(platform)
+	if platform == "icyPlatform":
+		friction = 0.01
+		acceleration = 0.02
+	else:
+		friction = 0.2
+		acceleration = 0.25
