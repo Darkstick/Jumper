@@ -20,6 +20,8 @@ func get_input():
 		velocity.x = lerp(velocity.x, 0, friction)
 	if Input.is_action_pressed("down"):
 		pass
+	if Input.is_action_pressed("reset"):
+		get_tree().change_scene("res://Scenes/Levels/main.tscn")
 
 func _physics_process(delta):
 	#movement#

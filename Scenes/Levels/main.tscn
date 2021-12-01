@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/Objects/basicPlatform.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Creatures/player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/main.gd" type="Script" id=3]
+
+[node name="main" type="Node"]
+script = ExtResource( 3 )
+
+[node name="staticFloor" parent="." instance=ExtResource( 1 )]
+position = Vector2( 526.303, 13.8253 )
+scale = Vector2( 8, 1 )
+
+[node name="player" parent="." instance=ExtResource( 2 )]
+position = Vector2( 510.303, -17.1577 )
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+current = true
+limit_left = 0
+limit_right = 1024
