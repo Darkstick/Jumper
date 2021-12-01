@@ -10,6 +10,7 @@ script = ExtResource( 3 )
 [node name="staticFloor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 526.303, 13.8253 )
 scale = Vector2( 8, 1 )
+is_static = true
 
 [node name="player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 510.303, -17.1577 )
