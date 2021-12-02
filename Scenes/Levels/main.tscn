@@ -6,6 +6,7 @@
 
 [node name="main" type="Node"]
 script = ExtResource( 3 )
+platformNum = 4
 
 [node name="staticFloor" parent="." instance=ExtResource( 1 )]
 position = Vector2( 526.303, 13.8253 )
