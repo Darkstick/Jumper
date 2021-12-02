@@ -17,7 +17,6 @@ var previousX = 0
 
 func _ready():
 	for i in platformNum:
-		
 		rng.randomize()
 		
 		#choses if the next platform will be to the left or the right of the previous one. 0 = left, 1 = right
@@ -34,14 +33,18 @@ func _ready():
 		if x < 30 || x > 1024:
 			x = rng.randf_range(400, 600)
 		
-		print(lor)
-		print(x)
-
-		
 		#height selection
 		rng.randomize()
 		var y = rng.randf_range(-100, -210) #210 is the current max player jump
-		var platform = basicPlatform.instance()
+		
+		#platform type selection
+		var type = rng.randi_range(0, 10)
+		var platform = null
+		if(type >= 9):
+			platform = icyPlatform.instance()
+		else:
+			platform = basicPlatform.instance()
+		
 		platform.position.y = y + previousY
 		platform.position.x = x
 		previousY = platform.position.y
