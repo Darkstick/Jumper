@@ -3,7 +3,6 @@ extends KinematicBody2D
 export var is_static = false
 var rng = RandomNumberGenerator.new()
 
-
 func _ready():
 	if is_static == false:
 		rng.randomize()
