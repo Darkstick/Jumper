@@ -18,3 +18,6 @@ texture = ExtResource( 1 )
 position = Vector2( 0.00682068, -0.288932 )
 scale = Vector2( 1.033, 1.033 )
 shape = SubResource( 1 )
+
+[node name="ExitSpawn" type="Position2D" parent="."]
+position = Vector2( -4.39563, -65.016 )

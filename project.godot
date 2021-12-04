@@ -14,6 +14,10 @@ config/name="Jumper"
 run/main_scene="res://Scenes/Levels/main.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Global="*res://Scripts/global.gd"
+
 [input]
 
 up={

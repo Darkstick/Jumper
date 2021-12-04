@@ -6,7 +6,7 @@ var thinPlatform = preload("res://Scenes/Objects/thinPlatform.tscn")
 var icyPlatform = preload("res://Scenes/Objects/icyPlatform.tscn")
 
 #number of platforms that will appear in this stage before the exit platform appears
-export var platformNum = 5
+var platformNum = Global.platforms
 
 #randomness
 var rng = RandomNumberGenerator.new()
@@ -17,6 +17,7 @@ var previousX = 0
 
 func _ready():
 	for i in platformNum:
+		print(i)
 		rng.randomize()
 		
 		#choses if the next platform will be to the left or the right of the previous one. 0 = left, 1 = right
@@ -40,10 +41,14 @@ func _ready():
 		#platform type selection
 		var type = rng.randi_range(0, 10)
 		var platform = null
-		if(type >= 9):
-			platform = icyPlatform.instance()
-		else:
+		if i == platformNum - 1:
 			platform = basicPlatform.instance()
+			platform.appear()
+		else:
+			if(type >= 9):
+				platform = icyPlatform.instance()
+			else:
+				platform = basicPlatform.instance()
 		
 		platform.position.y = y + previousY
 		platform.position.x = x
