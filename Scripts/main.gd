@@ -43,10 +43,13 @@ func _ready():
 		var platform = null
 		if i == platformNum - 1:
 			platform = basicPlatform.instance()
-			platform.appear()
+			platform.spawn_exit()
 		else:
 			if(type >= 9):
 				platform = icyPlatform.instance()
+			elif(type == 8):
+				platform = basicPlatform.instance()
+				platform.spawn_obstacle()
 			else:
 				platform = basicPlatform.instance()
 		

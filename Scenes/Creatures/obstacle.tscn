@@ -16,9 +16,9 @@ rotation = 1.5708
 polygon = PoolVector2Array( -8.48413, -19.325, 3.71733, -27.3601, 12.1733, -28.4442, 12.1733, 28.3629, 1.11548, 25.9778, -8.20781, 20.5573, -8.26899, 12.5167, -8.48413, -0.176948, -8.69928, -8.99794 )
 
 [node name="RayLeft" type="RayCast2D" parent="."]
-position = Vector2( 32, 0 )
+position = Vector2( 34.2857, 0 )
 enabled = true
 
 [node name="RayRight" type="RayCast2D" parent="."]
-position = Vector2( -32, 0 )
+position = Vector2( -34.2857, 0 )
 enabled = true
