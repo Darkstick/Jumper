@@ -35,5 +35,5 @@ func _physics_process(delta):
 
 	#floor detection#
 	if $Ground.is_colliding():
-		platform = $Ground.get_collider()
-		platform.contact(self)
+			platform = $Ground.get_collider()
+			platform.contact(self)
