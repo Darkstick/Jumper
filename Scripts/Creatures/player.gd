@@ -23,9 +23,23 @@ func get_input():
 	if Input.is_action_just_pressed("reset"):
 		get_tree().change_scene("res://Scenes/Levels/main.tscn")
 
+func damage():
+	if $Invincibility.is_stopped():
+		if Global.hp > 0:
+			if $Invincibility.is_stopped():
+				$Invincibility.start()
+				velocity.y = jumpspeed * 1.5
+				Global.hp -= 1
+				print(Global.hp)
+		else:
+			game_over()
+
+func game_over():
+	queue_free()
+
 func _physics_process(delta):
 	#movement#
-	if is_on_floor():
+	if (is_on_floor() || !$Invincibility.is_stopped()):
 		get_input()
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)

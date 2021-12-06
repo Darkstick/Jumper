@@ -17,7 +17,6 @@ var previousX = 0
 
 func _ready():
 	for i in platformNum:
-		print(i)
 		rng.randomize()
 		
 		#choses if the next platform will be to the left or the right of the previous one. 0 = left, 1 = right

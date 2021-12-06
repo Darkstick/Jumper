@@ -31,3 +31,8 @@ cast_to = Vector2( -15, 0 )
 [node name="Right" type="RayCast2D" parent="."]
 enabled = true
 cast_to = Vector2( 15, 0 )
+
+[node name="Invincibility" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Invincibility" to="." method="_on_Invincibility_timeout"]
