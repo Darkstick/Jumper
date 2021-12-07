@@ -30,7 +30,7 @@ func damage():
 				$Invincibility.start()
 				velocity.y = jumpspeed * 1.5
 				Global.hp -= 1
-				print(Global.hp)
+				Ui.update_health()
 		else:
 			game_over()
 

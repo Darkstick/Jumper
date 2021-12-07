@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Ressources/Fonts/Poco.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Scripts/Objects/UI.gd" type="Script" id=2]
+
+[node name="GUI" type="CanvasLayer"]
+script = ExtResource( 2 )
+
+[node name="GUI" type="MarginContainer" parent="."]
+margin_left = 20.0
+margin_top = 20.0
+margin_right = 20.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="GUI"]
+margin_right = 140.0
+margin_bottom = 68.0
+
+[node name="Life" type="HBoxContainer" parent="GUI/VBoxContainer"]
+margin_right = 140.0
+margin_bottom = 32.0
+
+[node name="LifeLabel" type="Label" parent="GUI/VBoxContainer/Life"]
+margin_right = 68.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Life:"
+
+[node name="LifeCounter" type="Label" parent="GUI/VBoxContainer/Life"]
+margin_left = 72.0
+margin_right = 112.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "99"
+
+[node name="Floor" type="HBoxContainer" parent="GUI/VBoxContainer"]
+margin_top = 36.0
+margin_right = 140.0
+margin_bottom = 68.0
+
+[node name="FloorLabel" type="Label" parent="GUI/VBoxContainer/Floor"]
+margin_right = 96.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "Floor:"
+
+[node name="FloorCounter" type="Label" parent="GUI/VBoxContainer/Floor"]
+margin_left = 100.0
+margin_right = 140.0
+margin_bottom = 32.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 1, 1, 1, 1 )
+text = "99"

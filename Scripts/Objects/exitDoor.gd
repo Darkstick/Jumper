@@ -6,6 +6,7 @@ func get_input():
 		z_index = -100
 		if get_overlapping_bodies().size() == 1:
 			Global.platforms += 1
+			Ui.update_floor()
 			get_tree().change_scene("res://Scenes/Levels/main.tscn")
 
 func _physics_process(_delta):

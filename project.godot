@@ -17,6 +17,11 @@ config/icon="res://icon.png"
 [autoload]
 
 Global="*res://Scripts/global.gd"
+Ui="*res://Scenes/Objects/UI.tscn"
+
+[display]
+
+window/stretch/mode="viewport"
 
 [input]
 
