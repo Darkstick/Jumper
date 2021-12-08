@@ -16,7 +16,7 @@ texture = ExtResource( 1 )
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0.00682068, -0.288932 )
-scale = Vector2( 1.033, 1.033 )
+scale = Vector2( 1.034, 1.033 )
 shape = SubResource( 1 )
 
 [node name="ExitSpawn" type="Position2D" parent="."]
