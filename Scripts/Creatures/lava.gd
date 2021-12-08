@@ -9,6 +9,7 @@ func _ready():
 func contact(body):
 	body.damage()
 
+
 func _physics_process(delta):
 	var collision = move_and_collide(velocity)
 	velocity.y = -speed

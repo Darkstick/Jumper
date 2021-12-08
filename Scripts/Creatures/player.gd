@@ -29,6 +29,8 @@ func damage():
 			if $Invincibility.is_stopped():
 				$Invincibility.start()
 				velocity.y = jumpspeed * 1.5
+				friction = 0.2
+				acceleration = 0.25
 				Global.hp -= 1
 				Ui.update_health()
 		else:
