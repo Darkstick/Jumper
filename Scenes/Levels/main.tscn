@@ -24,3 +24,13 @@ limit_right = 1024
 [node name="lava" parent="." instance=ExtResource( 4 )]
 position = Vector2( 510.303, 745.444 )
 scale = Vector2( 20, 20 )
+
+[node name="staticWallL" parent="." instance=ExtResource( 1 )]
+position = Vector2( -1.7528, -7480.35 )
+scale = Vector2( 0.4, 500 )
+is_static = true
+
+[node name="staticWallR" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1023.87, -7480.35 )
+scale = Vector2( 0.4, 500 )
+is_static = true

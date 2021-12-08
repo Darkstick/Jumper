@@ -1,11 +1,14 @@
 extends KinematicBody2D
 
 export var is_static = false
+export var z_level = 0
+
 var rng = RandomNumberGenerator.new()
 var exit = preload("res://Scenes/Objects/exitDoor.tscn")
 var obs = preload("res://Scenes/Creatures/obstacle.tscn")
 
 func _ready():
+	z_index = z_level
 	if is_static == false:
 		rng.randomize()
 		var random = rng.randf_range(0.5, 2)

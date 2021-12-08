@@ -3,7 +3,7 @@ extends Area2D
 
 func get_input():
 	if Input.is_action_just_pressed("up"):
-		z_index = -100
+		z_index = -1
 		if get_overlapping_bodies().size() == 1:
 			Global.platforms += 1
 			Ui.update_floor()
