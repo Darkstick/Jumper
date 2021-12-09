@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed = 2
+export var speed = 3
 var velocity = Vector2.ZERO
 var direction = 0 #0 = left, 1 = right
 

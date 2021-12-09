@@ -18,6 +18,7 @@ var previousX = 0
 func _ready():
 	for i in platformNum:
 		rng.randomize()
+		var moving = false #determines if next platform is moving
 		
 		#choses if the next platform will be to the left or the right of the previous one. 0 = left, 1 = right
 		var lor = rng.randi_range(0, 1)
@@ -29,9 +30,10 @@ func _ready():
 		if lor == 0:
 			x = rng.randf_range((previousX - 230), (previousX - 100))
 		
-		#make sure the platform isn't out of bounds
+		#make sure the platform isn't out of bounds, and if it is replace them with a moving platform.
 		if x < 30 || x > 1024:
 			x = rng.randf_range(400, 600)
+			moving = true
 		
 		#height selection
 		rng.randomize()
@@ -44,7 +46,9 @@ func _ready():
 			platform = basicPlatform.instance()
 			platform.spawn_exit()
 		else:
-			if(type >= 9):
+			if(moving):
+				platform = movingPlatform.instance()
+			elif(type >= 9):
 				platform = icyPlatform.instance()
 			elif(type == 8):
 				platform = basicPlatform.instance()
