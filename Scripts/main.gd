@@ -2,7 +2,7 @@ extends Node
 
 #all the platforms that will appear#
 var basicPlatform = preload("res://Scenes/Objects/basicPlatform.tscn")
-var thinPlatform = preload("res://Scenes/Objects/thinPlatform.tscn")
+var movingPlatform = preload("res://Scenes/Objects/movingPlatform.tscn")
 var icyPlatform = preload("res://Scenes/Objects/icyPlatform.tscn")
 
 #number of platforms that will appear in this stage before the exit platform appears

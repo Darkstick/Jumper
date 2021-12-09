@@ -22,6 +22,13 @@ func spawn_exit():
 
 func spawn_obstacle():
 	var obstacle = obs.instance()
+	var random = rng.randf_range(0.7, 2)
+	#reseting the size of the platform
+	$Sprite.scale = Vector2(2.5,0.5)
+	$Collision.scale = Vector2(1.034, 1.033)
+	#to resize them to their new parameters.
+	$Sprite.scale *= Vector2(random, 1)
+	$Collision.scale *= Vector2(random, 1)
 	obstacle.position.y -= 20
 	add_child(obstacle)
 

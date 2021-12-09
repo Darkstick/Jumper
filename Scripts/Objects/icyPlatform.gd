@@ -9,6 +9,7 @@ func _ready():
 		var random = rng.randf_range(0.5, 2)
 		$Sprite.scale *= Vector2(random,1)
 		$Collision.scale *= Vector2(random, 1)
+		z_index = -1
 
 func contact(object):
 	object.friction = 0.1
