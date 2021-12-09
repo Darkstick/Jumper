@@ -37,7 +37,9 @@ func damage():
 			game_over()
 
 func game_over():
-	queue_free()
+	$CollisionShape2D.disabled = true
+	$Camera.set_limit(MARGIN_BOTTOM, position.y + 300)
+	$gameOverScreen/AnimationPlayer.play("slide_in")
 
 func _physics_process(delta):
 	#movement#

@@ -6,6 +6,9 @@ var velocity = Vector2.ZERO
 func _ready():
 	z_index = 1
 
+func set_speed(change):
+	speed = change
+
 func contact(body):
 	body.damage()
 
