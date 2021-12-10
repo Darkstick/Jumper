@@ -18,4 +18,5 @@ func _physics_process(delta):
 	velocity.y = -speed
 	if collision:
 		if collision.collider.name == "player":
+			$AudioStreamPlayer.play()
 			collision.collider.damage()

@@ -19,6 +19,7 @@ func _physics_process(delta):
 		direction = 1
 	if collision:
 		if collision.collider.name == "player":
+			$AudioStreamPlayer.play()
 			collision.collider.damage()
 
 func contact(object):

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Ressources/Sprites/Placeholders/red.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/Creatures/lava.gd" type="Script" id=2]
+[ext_resource path="res://Ressources/SFX/sizzle.ogg" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 33.6927, 5.95573 )
@@ -17,3 +18,6 @@ texture = ExtResource( 1 )
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -23.9875 )
 shape = SubResource( 1 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
