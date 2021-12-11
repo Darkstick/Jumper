@@ -49,6 +49,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("up"):
 		if is_on_floor():
+			$sound.play()
 			velocity.y = jumpspeed
 
 	#floor detection#
