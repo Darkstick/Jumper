@@ -37,6 +37,7 @@ func damage():
 			game_over()
 
 func game_over():
+	Music.stop_music()
 	$CollisionShape2D.disabled = true
 	$Camera.set_limit(MARGIN_BOTTOM, position.y + 300)
 	$gameOverScreen/AnimationPlayer.play("slide_in")
@@ -48,6 +49,9 @@ func _physics_process(delta):
 	velocity.y += gravity * delta
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("up"):
+		if(Global.started == false):
+			Global.started = true
+			Music.play_music()
 		if is_on_floor():
 			$sound.play()
 			velocity.y = jumpspeed

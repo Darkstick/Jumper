@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lavarising.ogg-75dfd8f294e041619f6883c311a2f240.oggstr"
+
+[deps]
+
+source_file="res://Ressources/Music/lavarising.ogg"
+dest_files=[ "res://.import/lavarising.ogg-75dfd8f294e041619f6883c311a2f240.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

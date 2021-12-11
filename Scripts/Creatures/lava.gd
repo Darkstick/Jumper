@@ -15,7 +15,8 @@ func contact(body):
 
 func _physics_process(delta):
 	var collision = move_and_collide(velocity)
-	velocity.y = -speed
+	if(Global.started == true):
+		velocity.y = -speed
 	if collision:
 		if collision.collider.name == "player":
 			$AudioStreamPlayer.play()
