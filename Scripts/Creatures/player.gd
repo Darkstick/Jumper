@@ -37,6 +37,8 @@ func damage():
 			game_over()
 
 func game_over():
+	Global.started = false
+	Global.game_overed = true
 	Music.stop_music()
 	$CollisionShape2D.disabled = true
 	$Camera.set_limit(MARGIN_BOTTOM, position.y + 300)
@@ -50,6 +52,7 @@ func _physics_process(delta):
 	velocity = move_and_slide(velocity, Vector2.UP)
 	if Input.is_action_just_pressed("up"):
 		if(Global.started == false):
+			Global.game_overed = false
 			Global.started = true
 			Music.play_music()
 		if is_on_floor():
