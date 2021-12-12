@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://Ressources/Sprites/Placeholders/red.png" type="Texture" id=1]
+[ext_resource path="res://Ressources/Sprites/lava.jpg" type="Texture" id=1]
 [ext_resource path="res://Scripts/Creatures/lava.gd" type="Script" id=2]
 [ext_resource path="res://Ressources/SFX/sizzle.wav" type="AudioStream" id=3]
 
@@ -13,7 +13,10 @@ collision_mask = 2
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 0.2, 0.222 )
 texture = ExtResource( 1 )
+flip_h = true
+flip_v = true
 
 [node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -23.9875 )
