@@ -12,7 +12,7 @@ var platformNum = Global.platforms
 var rng = RandomNumberGenerator.new()
 
 #keeps track of the height of the last platform
-var previousY = 0
+var previousY = -550
 var previousX = 0
 
 func _ready():

@@ -34,3 +34,15 @@ is_static = true
 position = Vector2( 1023.87, -7480.35 )
 scale = Vector2( 0.4, 520 )
 is_static = true
+
+[node name="basicPlatform" parent="." instance=ExtResource( 1 )]
+position = Vector2( 361.433, -177.349 )
+is_static = true
+
+[node name="basicPlatform2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 646.523, -347.279 )
+is_static = true
+
+[node name="basicPlatform3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 357.037, -518.182 )
+is_static = true
