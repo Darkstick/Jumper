@@ -11,8 +11,10 @@ var platform = null
 func get_input():
 	var dir = 0
 	if Input.is_action_pressed("right"):
+		$Sprite.animation = "right"
 		dir += 1
 	if Input.is_action_pressed("left"):
+		$Sprite.animation = "left"
 		dir -= 1
 	if dir != 0:
 		velocity.x = lerp(velocity.x, dir * maxspeed, acceleration)
@@ -63,3 +65,9 @@ func _physics_process(delta):
 	if $Ground.is_colliding():
 			platform = $Ground.get_collider()
 			platform.contact(self)
+
+	#animations#
+	if (!is_on_floor()):
+		$Sprite.animation = "jump"
+	elif(!Input.is_action_pressed("left") && !Input.is_action_pressed("right")):
+		$Sprite.animation = "standing"
